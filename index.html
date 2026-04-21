@@ -1,309 +1,345 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>陀螺計分器 · App 支援頁面</title>
-<meta name="description" content="陀螺計分器 — Beyblade X 對戰計分與賽程管理工具。支援單淘汰賽、排行榜及對戰紀錄，完全離線使用。">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陀螺計分器 · App 支援頁面</title>
+    <meta name="description" content="陀螺計分器 — Beyblade X 對戰計分與賽程管理工具。支援單淘汰賽、排行榜及對戰紀錄，完全離線使用。">
 
-<style>
-* { box-sizing: border-box; }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    background: #f5f6f8;
-    color: #222;
-    line-height: 1.7;
-    font-size: 15px;
-}
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background: #f5f6f8;
+            color: #222;
+            line-height: 1.7;
+            font-size: 15px;
+        }
 
-.container {
-    max-width: 760px;
-    margin: auto;
-    padding: 28px 20px 60px;
-}
+        .container {
+            max-width: 760px;
+            margin: auto;
+            padding: 28px 20px 60px;
+        }
 
-.hero {
-    background: linear-gradient(135deg, #1c1c2e 0%, #2d2d44 100%);
-    border-radius: 16px;
-    padding: 28px 24px;
-    margin-bottom: 28px;
-    color: white;
-}
+        .hero {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 28px;
+            border: 1px solid #e8e8ee;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+        }
 
-.hero h1 {
-    font-size: 24px;
-    font-weight: 800;
-    margin: 0 0 6px;
-    letter-spacing: -0.3px;
-}
+        .hero h1 {
+            font-size: 24px;
+            font-weight: 800;
+            margin: 0 0 6px;
+            letter-spacing: -0.3px;
+            color: #1a1a1a;
+        }
 
-.hero .en {
-    font-size: 14px;
-    color: rgba(255,255,255,0.55);
-    margin-bottom: 12px;
-}
+        .hero .en {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 12px;
+        }
 
-.hero p {
-    font-size: 14px;
-    color: rgba(255,255,255,0.75);
-    margin: 0 0 14px;
-    line-height: 1.6;
-}
+        .hero p {
+            font-size: 14px;
+            color: #555;
+            margin: 0 0 16px;
+            line-height: 1.6;
+        }
 
-.meta-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
+        .meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
 
-.badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    background: rgba(255,255,255,0.12);
-    color: rgba(255,255,255,0.85);
-    font-size: 12px;
-    padding: 3px 10px;
-    border-radius: 20px;
-    font-weight: 500;
-}
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: #f0f0f5;
+            color: #444;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+            border: 1px solid #e0e0e8;
+        }
 
-h2 {
-    margin-top: 36px;
-    margin-bottom: 0;
-    font-size: 17px;
-    font-weight: 700;
-    color: #1a1a1a;
-}
+        h2 {
+            margin-top: 36px;
+            margin-bottom: 0;
+            font-size: 17px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
 
-.card {
-    background: white;
-    padding: 16px 18px;
-    border-radius: 12px;
-    margin-top: 10px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.07);
-}
+        .card {
+            background: white;
+            padding: 16px 18px;
+            border-radius: 12px;
+            margin-top: 10px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+        }
 
-.card p { margin: 6px 0; }
-.card p:first-child { margin-top: 0; }
-.card p:last-child { margin-bottom: 0; }
+        .card p {
+            margin: 6px 0;
+        }
 
-.faq-q {
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 5px;
-}
+        .card p:first-child {
+            margin-top: 0;
+        }
 
-.faq-a {
-    color: #444;
-    margin-top: 0;
-}
+        .card p:last-child {
+            margin-bottom: 0;
+        }
 
-.feature-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 10px;
-}
+        .faq-q {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
 
-.feature-item {
-    background: white;
-    border-radius: 12px;
-    padding: 14px 16px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.07);
-}
+        .faq-a {
+            color: #444;
+            margin-top: 0;
+        }
 
-.feature-icon {
-    font-size: 22px;
-    margin-bottom: 6px;
-}
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
 
-.feature-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 3px;
-}
+        .feature-item {
+            background: white;
+            border-radius: 12px;
+            padding: 14px 16px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+        }
 
-.feature-desc {
-    font-size: 12px;
-    color: #666;
-    line-height: 1.5;
-}
+        .feature-icon {
+            display: none;
+        }
 
-ul {
-    margin: 4px 0;
-    padding-left: 20px;
-}
+        .feature-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+        }
 
-li { margin-bottom: 7px; }
+        .feature-desc {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.5;
+        }
 
-.limit-list li { color: #555; }
+        ul {
+            margin: 4px 0;
+            padding-left: 20px;
+        }
 
-a { color: #007aff; text-decoration: none; }
-a:hover { text-decoration: underline; }
+        li {
+            margin-bottom: 7px;
+        }
 
-.doc-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 0;
-    border-bottom: 1px solid #f0f0f5;
-    font-size: 14px;
-    color: #007aff;
-    text-decoration: none;
-}
+        .limit-list li {
+            color: #555;
+        }
 
-.doc-link:last-child { border-bottom: none; padding-bottom: 0; }
-.doc-link:first-child { padding-top: 0; }
-.doc-link:hover { opacity: 0.75; }
+        a {
+            color: #007aff;
+            text-decoration: none;
+        }
 
-.doc-link .arrow { color: #c7c7cc; font-size: 16px; }
+        a:hover {
+            text-decoration: underline;
+        }
 
-.footer {
-    margin-top: 50px;
-    font-size: 12px;
-    color: #aaa;
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #e8e8ee;
-}
+        .doc-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f5;
+            font-size: 14px;
+            color: #007aff;
+            text-decoration: none;
+        }
 
-@media (max-width: 480px) {
-    .feature-grid { grid-template-columns: 1fr; }
-    .hero { padding: 22px 18px; }
-}
-</style>
+        .doc-link:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .doc-link:first-child {
+            padding-top: 0;
+        }
+
+        .doc-link:hover {
+            opacity: 0.75;
+        }
+
+        .doc-link .arrow {
+            color: #c7c7cc;
+            font-size: 16px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 12px;
+            color: #aaa;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #e8e8ee;
+        }
+
+        @media (max-width: 480px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 22px 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<div class="container">
+    <div class="container">
 
-<!-- Hero -->
-<div class="hero">
-    <h1>陀螺計分器</h1>
-    <div class="en">Beyblade Score Tracker · App Support</div>
-    <p>Beyblade X 對戰計分與賽程管理工具，支援單淘汰賽、排行榜及完整對戰紀錄。</p>
-    <div class="meta-row">
-        <span class="badge">📱 iOS 18+</span>
-        <span class="badge">🌐 繁體中文</span>
-        <span class="badge">✈️ 完全離線</span>
-        <span class="badge">🆓 免費</span>
-        <span class="badge">🔖 版本 1.0</span>
+        <!-- Hero -->
+        <div class="hero">
+            <h1>陀螺計分器</h1>
+            <div class="en">Beyblade Score Tracker · App Support</div>
+            <p>Beyblade X 對戰計分與賽程管理工具，支援單淘汰賽、排行榜及完整對戰紀錄。</p>
+            <div class="meta-row">
+                <span class="badge">iOS 18+</span>
+                <span class="badge">繁體中文</span>
+                <span class="badge">完全離線</span>
+                <span class="badge">免費</span>
+                <span class="badge">版本 1.0</span>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <h2>主要功能</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-title">單淘汰賽</div>
+                <div class="feature-desc">支援 2–8 名玩家，自動生成賽程，處理輪空安排</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-title">即時計分</div>
+                <div class="feature-desc">記錄每回合勝負，支援迴轉、爆裂及超出等多種勝利類型</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-title">排行榜</div>
+                <div class="feature-desc">自動統計勝負場次及積分，一目了然</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-title">對戰紀錄</div>
+                <div class="feature-desc">完整保存歷史賽果，可隨時回顧</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-title">外觀自訂</div>
+                <div class="feature-desc">上傳自訂標誌及背景圖片，支援直橫向分別設定</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-title">主題配色</div>
+                <div class="feature-desc">多款主題配色，支援深色模式，適合不同使用場景</div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <h2>常見問題</h2>
+
+        <div class="card">
+            <p class="faq-q">Q：如何開始一個比賽？</p>
+            <p class="faq-a">在主畫面點擊「多人對戰」，輸入玩家名稱並設定人數，即可自動生成對戰賽程。</p>
+        </div>
+
+        <div class="card">
+            <p class="faq-q">Q：如何記錄對戰結果？</p>
+            <p class="faq-a">點擊賽程中的場次，選擇勝利方式及獲勝者，系統會自動更新晉級資訊。</p>
+        </div>
+
+        <div class="card">
+            <p class="faq-q">Q：為什麼會出現「輪空」？</p>
+            <p class="faq-a">單淘汰賽的人數需為 2 的次方（2、4、8 人）。當人數不符合時，系統會自動安排部分玩家輪空直接晉級。</p>
+        </div>
+
+        <div class="card">
+            <p class="faq-q">Q：如何自訂背景圖片？</p>
+            <p class="faq-a">點擊主畫面右上角的設定按鈕，進入設定頁面即可分別上傳直向（9:16）及橫向（16:9）背景圖片。</p>
+        </div>
+
+        <div class="card">
+            <p class="faq-q">Q：需要網路連線嗎？</p>
+            <p class="faq-a">不需要。本應用程式完全離線運作，所有功能均可在沒有網路的環境下正常使用。</p>
+        </div>
+
+        <div class="card">
+            <p class="faq-q">Q：資料會儲存在哪裡？</p>
+            <p class="faq-a">所有資料（比賽紀錄、玩家名稱、自訂圖片）均只儲存在您的裝置本地，不會上傳至任何伺服器。</p>
+        </div>
+
+        <div class="card">
+            <p class="faq-q">Q：如何回報問題或提供建議？</p>
+            <p class="faq-a">請拍攝截圖並電郵至 <a href="mailto:PeterKam.Lab@gmail.com">PeterKam.Lab@gmail.com</a>，我們會於 7
+                個工作天內跟進。</p>
+        </div>
+
+        <!-- Known Limitations -->
+        <h2>目前限制</h2>
+        <div class="card">
+            <ul class="limit-list">
+                <li>僅支援單淘汰賽制（未來版本計劃加入循環賽）</li>
+                <li>不支援跨裝置資料同步</li>
+                <li>刪除應用程式後資料無法復原</li>
+                <li>最多支援 8 名玩家同時參賽</li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <h2>聯絡支援</h2>
+        <div class="card">
+            <p><a href="mailto:PeterKam.Lab@gmail.com">PeterKam.Lab@gmail.com</a></p>
+            <p style="font-size:13px; color:#888; margin-top:8px;">回覆時間：7 個工作天內 ・ 語言：繁體中文 / English</p>
+        </div>
+
+        <!-- Docs -->
+        <h2>相關文件</h2>
+        <div class="card" style="padding: 4px 18px;">
+            <a href="https://beyblade-score.netlify.app/privacy.html" class="doc-link">
+                <span>隱私政策 Privacy Policy</span>
+                <span class="arrow">›</span>
+            </a>
+            <a href="https://beyblade-score.netlify.app/terms.html" class="doc-link">
+                <span>服務條款 Terms of Service</span>
+                <span class="arrow">›</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            © 2026 陀螺計分器 ・ 個人開發者 Peter Kam ・ 香港<br>
+            本應用程式為非官方應用，與 Beyblade 品牌無任何關聯。
+        </div>
+
     </div>
-</div>
-
-<!-- Features -->
-<h2>主要功能</h2>
-<div class="feature-grid">
-    <div class="feature-item">
-        <div class="feature-icon">🏆</div>
-        <div class="feature-title">單淘汰賽</div>
-        <div class="feature-desc">支援 2–8 名玩家，自動生成賽程，處理輪空安排</div>
-    </div>
-    <div class="feature-item">
-        <div class="feature-icon">⚔️</div>
-        <div class="feature-title">即時計分</div>
-        <div class="feature-desc">記錄每回合勝負，支援迴轉、爆裂及超出等多種勝利類型</div>
-    </div>
-    <div class="feature-item">
-        <div class="feature-icon">📊</div>
-        <div class="feature-title">排行榜</div>
-        <div class="feature-desc">自動統計勝負場次及積分，一目了然</div>
-    </div>
-    <div class="feature-item">
-        <div class="feature-icon">📁</div>
-        <div class="feature-title">對戰紀錄</div>
-        <div class="feature-desc">完整保存歷史賽果，可隨時回顧</div>
-    </div>
-    <div class="feature-item">
-        <div class="feature-icon">🎨</div>
-        <div class="feature-title">外觀自訂</div>
-        <div class="feature-desc">上傳自訂標誌及背景圖片，支援直橫向分別設定</div>
-    </div>
-    <div class="feature-item">
-        <div class="feature-icon">🌙</div>
-        <div class="feature-title">深色模式</div>
-        <div class="feature-desc">多款主題配色，適合不同使用場景</div>
-    </div>
-</div>
-
-<!-- FAQ -->
-<h2>常見問題</h2>
-
-<div class="card">
-    <p class="faq-q">Q：如何開始一個比賽？</p>
-    <p class="faq-a">在主畫面點擊「多人對戰」，輸入玩家名稱並設定人數，即可自動生成對戰賽程。</p>
-</div>
-
-<div class="card">
-    <p class="faq-q">Q：如何記錄對戰結果？</p>
-    <p class="faq-a">點擊賽程中的場次，選擇勝利方式及獲勝者，系統會自動更新晉級資訊。</p>
-</div>
-
-<div class="card">
-    <p class="faq-q">Q：為什麼會出現「輪空」？</p>
-    <p class="faq-a">單淘汰賽的人數需為 2 的次方（2、4、8 人）。當人數不符合時，系統會自動安排部分玩家輪空直接晉級。</p>
-</div>
-
-<div class="card">
-    <p class="faq-q">Q：如何自訂背景圖片？</p>
-    <p class="faq-a">點擊主畫面右上角的設定按鈕（⚙️），進入設定頁面即可分別上傳直向（9:16）及橫向（16:9）背景圖片。</p>
-</div>
-
-<div class="card">
-    <p class="faq-q">Q：需要網路連線嗎？</p>
-    <p class="faq-a">不需要。本應用程式完全離線運作，所有功能均可在沒有網路的環境下正常使用。</p>
-</div>
-
-<div class="card">
-    <p class="faq-q">Q：資料會儲存在哪裡？</p>
-    <p class="faq-a">所有資料（比賽紀錄、玩家名稱、自訂圖片）均只儲存在您的裝置本地，不會上傳至任何伺服器。</p>
-</div>
-
-<div class="card">
-    <p class="faq-q">Q：如何回報問題或提供建議？</p>
-    <p class="faq-a">請拍攝截圖並電郵至 <a href="mailto:PeterKam.Lab@gmail.com">PeterKam.Lab@gmail.com</a>，我們會於 7 個工作天內跟進。</p>
-</div>
-
-<!-- Known Limitations -->
-<h2>目前限制</h2>
-<div class="card">
-    <ul class="limit-list">
-        <li>僅支援單淘汰賽制（未來版本計劃加入循環賽）</li>
-        <li>不支援跨裝置資料同步</li>
-        <li>刪除應用程式後資料無法復原</li>
-        <li>最多支援 8 名玩家同時參賽</li>
-    </ul>
-</div>
-
-<!-- Contact -->
-<h2>聯絡支援</h2>
-<div class="card">
-    <p>📧 <a href="mailto:PeterKam.Lab@gmail.com">PeterKam.Lab@gmail.com</a></p>
-    <p style="font-size:13px; color:#888; margin-top:8px;">回覆時間：7 個工作天內 ・ 語言：繁體中文 / English</p>
-</div>
-
-<!-- Docs -->
-<h2>相關文件</h2>
-<div class="card" style="padding: 4px 18px;">
-    <a href="https://beyblade-score.netlify.app/privacy.html" class="doc-link">
-        <span>🔒 隱私政策 Privacy Policy</span>
-        <span class="arrow">›</span>
-    </a>
-    <a href="https://beyblade-score.netlify.app/terms.html" class="doc-link">
-        <span>📄 服務條款 Terms of Service</span>
-        <span class="arrow">›</span>
-    </a>
-</div>
-
-<div class="footer">
-    © 2026 陀螺計分器 ・ 個人開發者 Peter Kam ・ 香港<br>
-    本應用程式為非官方應用，與 Beyblade 品牌無任何關聯。
-</div>
-
-</div>
 </body>
+
 </html>
