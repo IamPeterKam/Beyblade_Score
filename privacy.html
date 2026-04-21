@@ -111,6 +111,22 @@ table td {
 a { color: #007aff; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+.doc-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f5;
+    font-size: 14px;
+    color: #007aff;
+    text-decoration: none;
+}
+
+.doc-link:last-child { border-bottom: none; padding-bottom: 0; }
+.doc-link:first-child { padding-top: 0; }
+.doc-link:hover { opacity: 0.75; }
+.doc-link .arrow { color: #c7c7cc; font-size: 16px; }
+
 .footer {
     margin-top: 50px;
     font-size: 12px;
@@ -231,8 +247,20 @@ a:hover { text-decoration: underline; }
 <h2>10. 聯絡我們</h2>
 <div class="card">
     <p>如您對本隱私政策或您的個人資料有任何疑問，請透過以下方式聯絡：</p>
-    <p>📧 <a href="mailto:PeterKam.Lab@gmail.com">PeterKam.Lab@gmail.com</a></p>
+    <p><a href="mailto:PeterKam.Lab@gmail.com">PeterKam.Lab@gmail.com</a></p>
     <p style="font-size:13px; color:#888;">我們將於 7 個工作天內回覆您的查詢。</p>
+</div>
+
+<h2>相關文件</h2>
+<div class="card" style="padding: 4px 18px;">
+    <a href="https://beyblade-score.netlify.app/" class="doc-link">
+        <span>App 支援頁面</span>
+        <span class="arrow">›</span>
+    </a>
+    <a href="https://beyblade-score.netlify.app/terms.html" class="doc-link">
+        <span>服務條款 Terms of Service</span>
+        <span class="arrow">›</span>
+    </a>
 </div>
 
 <div class="footer">
