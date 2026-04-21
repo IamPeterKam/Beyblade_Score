@@ -1,163 +1,124 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Support - 陀螺計分器</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
-            background-color: #0f0f0f;
-            color: #e5e5e5;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #d4af37;
-            font-size: 24px;
-        }
-        h2 {
-            color: #d4af37;
-            margin-top: 30px;
-            font-size: 18px;
-        }
-        p {
-            margin: 10px 0;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .card {
-            background-color: #1a1a1a;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-        a {
-            color: #d4af37;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .footer {
-            margin-top: 40px;
-            font-size: 14px;
-            color: #888;
-        }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 20px;
-            }
-            h2 {
-                font-size: 16px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陀螺計分器 App Support</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+    background: #f5f6f8;
+    color: #222;
+}
+
+.container {
+    max-width: 760px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+a {
+    color: #007aff;
+    text-decoration: none;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 13px;
+    color: #888;
+}
+</style>
 </head>
+
 <body>
-
 <div class="container">
-    <h1>陀螺計分器 App Support</h1>
-    <p><strong>版本 Version:</strong> 1.0</p>
-    <p><strong>最後更新:</strong> 2026年4月21日</p>
 
-    <h2>應用簡介 (App Overview)</h2>
-    <div class="card">
-        <p>
-            「陀螺計分器」是一款專為 Beyblade X 比賽設計的計分工具，支援對戰記錄、單淘汰賽 (Single Elimination Bracket) 管理，以及排行榜 (Leaderboard) 查看。
-        </p>
-        <p>
-            使用者可自訂 Logo 與背景圖片，打造個人化比賽介面，所有資料均儲存在本機裝置中。
-        </p>
-    </div>
+<h1>陀螺計分器 App Support</h1>
+<p>版本 1.0 ・ 2026年4月21日</p>
 
-    <h2>常見問題 (FAQ)</h2>
-
-    <div class="card">
-        <p><strong>Q: 如何開始一個比賽？ (How do I start a tournament?)</strong></p>
-        <p>
-            在主畫面選擇「建立比賽」，輸入玩家名稱後系統會自動生成單淘汰賽對戰表。
-        </p>
-    </div>
-
-    <div class="card">
-        <p><strong>Q: 如何記錄對戰結果？ (How do I record a battle result?)</strong></p>
-        <p>
-            點擊當前對戰場次，選擇勝方玩家，系統將自動更新晉級結果與排行榜。
-        </p>
-    </div>
-
-    <div class="card">
-        <p><strong>Q: 如何上傳自訂 Logo 或背景？ (How do I upload a custom logo or background?)</strong></p>
-        <p>
-            進入設定頁面，點擊「更換圖片」，即可從照片資料庫 (Photo Library) 選擇圖片。
-        </p>
-    </div>
-
-    <div class="card">
-        <p><strong>Q: 如何刪除比賽記錄？ (How do I delete match history?)</strong></p>
-        <p>
-            在歷史紀錄頁面中，選擇對應項目並執行刪除操作（或使用清除全部功能）。
-        </p>
-    </div>
-
-    <div class="card">
-        <p><strong>Q: 為什麼對戰表顯示「輪空」？ (Why does the bracket show "bye"?)</strong></p>
-        <p>
-            當參賽人數不是 2 的次方時，系統會自動安排「輪空 (Bye)」，讓部分玩家直接晉級下一輪，以維持賽制平衡。
-        </p>
-    </div>
-
-    <div class="card">
-        <p><strong>Q: 需要網路連線嗎？ (Does the app require internet connection?)</strong></p>
-        <p>
-            不需要。本應用程式為完全離線 (Offline) 使用，所有資料儲存在您的裝置中。
-        </p>
-    </div>
-
-    <h2>已知限制 (Known Limitations)</h2>
-    <div class="card">
-        <ul>
-            <li>目前僅支援單淘汰賽 (Single Elimination)</li>
-            <li>不支援跨裝置資料同步</li>
-            <li>資料刪除後無法復原（No recovery）</li>
-            <li>圖片檔案大小過大可能影響效能</li>
-        </ul>
-    </div>
-
-    <h2>聯絡支援 (Contact Support)</h2>
-    <div class="card">
-        <p>
-            如有任何問題或建議，請聯絡：
-        </p>
-        <p>
-            📧 <a href="mailto:PeterKam.Lab@gmail.com">PeterKam.Lab@gmail.com</a>
-        </p>
-    </div>
-
-    <h2>隱私政策 (Privacy Policy)</h2>
-    <div class="card">
-        <p>
-            請參閱我們的隱私政策：
-        </p>
-        <p>
-            <a href="https://beyblade-score.netlify.app/privacy.html">Privacy Policy</a>
-        </p>
-    </div>
-
-    <div class="footer">
-        <p>© 2026 陀螺計分器. All rights reserved.</p>
-    </div>
+<h2>應用簡介</h2>
+<div class="card">
+<p>
+「陀螺計分器」是一款用於 Beyblade X 對戰的計分與比賽管理工具。
+本應用程式為非官方應用，僅供個人娛樂與比賽輔助使用。
+</p>
+<p>
+支援單淘汰賽、排行榜與對戰紀錄，並可自訂背景與標誌。
+</p>
 </div>
 
+<h2>常見問題</h2>
+
+<div class="card">
+<p><strong>Q: 如何開始一個比賽？</strong></p>
+<p>在主畫面建立比賽並輸入玩家名稱，即可生成對戰表。</p>
+</div>
+
+<div class="card">
+<p><strong>Q: 如何記錄對戰結果？</strong></p>
+<p>點擊場次並選擇勝方，系統會自動更新晉級。</p>
+</div>
+
+<div class="card">
+<p><strong>Q: 如何上傳圖片？</strong></p>
+<p>進入設定頁面即可從照片資料庫選擇圖片。</p>
+</div>
+
+<div class="card">
+<p><strong>Q: 為什麼會出現「輪空」？</strong></p>
+<p>當人數不符合 2 的倍數時，系統會自動安排輪空。</p>
+</div>
+
+<div class="card">
+<p><strong>Q: 需要網路嗎？</strong></p>
+<p>不需要，所有功能皆可離線使用。</p>
+</div>
+
+<h2>已知限制</h2>
+<div class="card">
+<ul>
+<li>僅支援單淘汰賽</li>
+<li>不支援資料同步</li>
+<li>資料刪除後無法恢復</li>
+</ul>
+</div>
+
+<h2>聯絡支援</h2>
+<div class="card">
+<p>📧 <a href="mailto:PeterKam.Lab@gmail.com">PeterKam.Lab@gmail.com</a></p>
+</div>
+
+<h2>相關文件</h2>
+<div class="card">
+<p>
+<a href="https://beyblade-score.netlify.app/privacy.html">隱私政策</a><br>
+<a href="https://beyblade-score.netlify.app/terms.html">服務條款</a>
+</p>
+</div>
+
+<div class="footer">
+© 2026 陀螺計分器
+</div>
+
+</div>
 </body>
 </html>
